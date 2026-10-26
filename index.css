@@ -1,0 +1,72 @@
+
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #14213d;
+    --muted: #5b6678;
+    --line: #c9d2de;
+    --block: #ffd60a;
+    --water: #00a6f4;
+    --error: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1726;
+      --surface: #16223a;
+      --text: #e8eef8;
+      --muted: #9aa8bf;
+      --line: #2c3c5a;
+      --error: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  p.lead { margin: 0 0 20px; color: var(--muted); }
+  form { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+  input[type="text"] {
+    flex: 1 1 260px;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  button {
+    padding: 10px 18px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--water);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:focus-visible, input:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+  #error { min-height: 1.5em; margin: 0 0 12px; color: var(--error); font-size: 0.95rem; }
+  .result {
+    display: flex; align-items: baseline; gap: 10px;
+    margin: 8px 0 12px;
+  }
+  .result strong { font-size: 3rem; line-height: 1; color: var(--water); }
+  .result span { color: var(--muted); }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px;
+    overflow-x: auto;
+  }
+  .panel h2 { margin: 0 0 8px; font-size: 1rem; }
+  svg { display: block; max-width: 100%; height: auto; }
+  .legend { display: flex; gap: 16px; margin-top: 10px; font-size: 0.9rem; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; margin-right: 6px; border: 1px solid var(--line); vertical-align: -1px; }
